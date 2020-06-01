@@ -23,17 +23,19 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 
 // ==============================================================================
 
+// page to add/update workouts
 app.get("/exercise", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/exercise.html"));
 });
 
+// page to see exercise stats (graphs & charts)
 app.get("/stats", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/stats.html"));
 });
 
 // ==============================================================================
 
-// get the last workout
+// get the last workout (for index page)
 app.get("/api/workouts", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {
@@ -44,7 +46,7 @@ app.get("/api/workouts", (req, res) => {
     });
 });
 
-// create a new workout
+// create a new workout (for exercise page)
 app.post("/api/workouts", ({ body }, res) => {
   db.Workout.create(body)
     .then((dbWorkout) => {
@@ -55,7 +57,7 @@ app.post("/api/workouts", ({ body }, res) => {
     });
 });
 
-// update an existing workout
+// update an existing workout (for exercise page)
 app.put("/api/workouts/:id", (req, res) => {
   db.Workout.findOneAndUpdate(
     { _id: req.params.id },
@@ -69,7 +71,7 @@ app.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-// get all previous workouts
+// get all previous workouts (for stats page)
 app.get("/api/workouts/range", (req, res) => {
   db.Workout.find({})
     .then((dbWorkout) => {

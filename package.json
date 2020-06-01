@@ -1,7 +1,7 @@
 {
   "name": "workout_tracker",
   "version": "1.0.0",
-  "description": "",
+  "description": "an app to add, update, and track daily workout stats",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,8 +9,8 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Chyna Davis",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.3",
     "mongoose": "^5.3.16",
