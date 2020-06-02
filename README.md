@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This is an application that allows user to create new workout plans, edit existing workout plans, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data and Express to handle routes.
+This is an application that allows user to create new workout plans, edit existing workout plans, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data, Express to handle routes, and is deployed on Heroku.
 
 ---
 
@@ -15,6 +15,7 @@ This is an application that allows user to create new workout plans, edit existi
 * [License](#license)
 * [Contributing](#contributing)
 * [Resources](#resources)
+* [Future Development](#future-development)
 * [Questions](#questions)
 
 ---
@@ -160,12 +161,22 @@ https://www.contributor-covenant.org/translations.
 ---
 
 ## Resources:
-* npm packages:
+* __npm packages:__
   * [express](https://www.npmjs.com/package/express)
   * [mongoose](https://www.npmjs.com/package/mongoose)
   * [morgan](https://www.npmjs.com/package/morgan)
-* [Heroku](https://www.heroku.com/home)
-* [MongoDB](https://mongoosejs.com/docs/guide.html)
+* __deployment:__
+  * [Heroku](https://www.heroku.com/home)
+  * [MongoDB](https://mongoosejs.com/docs/guide.html)
+
+---
+
+## Future Development:
+There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
+* on the main page, add a link to go to the _stats_ page (so that the user does not have to type in the _/stats_ route in the URL bar)
+* fix the code for the _stats_ page
+  * make it so that each newly-added exercise is still grouped within an existing workout, not added as a new workout on a new day (the main page calculates this correctly...)
+  * fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started)
 
 ---
 
