@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This is an app that allows user to create new workout plans, edit existing workout plans, track their daily stats, and work towards their fitness goals! This app uses a MongoDatabase to store a user's workout data and Express to handle routes.
+This is an application that allows user to create new workout plans, edit existing workout plans, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data and Express to handle routes.
 
 ---
 
@@ -15,23 +15,22 @@ This is an app that allows user to create new workout plans, edit existing worko
 * [License](#license)
 * [Contributing](#contributing)
 * [Resources](#resources)
-* [Tests](#tests)
 * [Questions](#questions)
 
 ---
 
 ## Installation:
-none required.
+No installation is required.
 
 ---
 
 ## Usage:
-go to [this link]()
+To use the application, to [this link]().
 
 ---
 
 ## Demonstration:
-go to [this link]()
+To see how to use the application, go to [this link]().
 
 ---
 
@@ -167,11 +166,6 @@ https://www.contributor-covenant.org/translations.
   * [morgan](https://www.npmjs.com/package/morgan)
 * [Heroku](https://www.heroku.com/home)
 * [MongoDB](https://mongoosejs.com/docs/guide.html)
-
----
-
-## Tests:
-none at the moment
 
 ---
 
