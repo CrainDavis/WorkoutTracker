@@ -15,6 +15,7 @@ This is an application that allows user to create new workout plans, edit existi
 * [License](#license)
 * [Contributing](#contributing)
 * [Resources](#resources)
+* [Bug Fixes](#bug-fixes)
 * [Future Development](#future-development)
 * [Questions](#questions)
 
@@ -171,12 +172,21 @@ https://www.contributor-covenant.org/translations.
 
 ---
 
+## Bug Fixes:
+The starter code for this assignment came with some issues, particularly in the _public/stats.js_ file. The issues and their solutions are as follows:
+* __Problem 1:__
+  * __issue:__ Although a __Workout__ can have multiple __Exercises__ in it, the _stats_ page will separate the duration of each __Exercise__ into separate days instead of adding up all the time accrued for all exercises in one workout.
+  * __solution:__ Fix the code so that the number of hours exercised in a day is found by using the "totalDuration" field is used instead of individual durations.
+* __Problem 2:__
+  * __issue:__ For any __Exercises__ categorized as "resistance", the stats page will separate their weights into different dates, even if they are in the same __Workout__.
+  * __solution:__ Get the individual weights lifted for each __Exercise__ in a __Workout__ and total them up. Thus, the _stats_ page now shows each __Workout's__ total weight lifted in one bar-graph column.
+
 ## Future Development:
 There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
-* on the main page, add a link to go to the _stats_ page (so that the user does not have to type in the _/stats_ route in the URL bar)
-* fix the code for the _stats_ page
-  * make it so that each newly-added exercise is still grouped within an existing workout, not added as a new workout on a new day (the main page calculates this correctly...)
-  * fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started)
+* On the main page, add a link to go to the _stats_ page (so that the user does not have to type in the _/stats_ route in the URL bar).
+* Fix the code for the _stats_ page for the following:
+  * Fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started).
+* Make it so that a user can only start a new workout once a day, so as to facilitate functionality of the _stats_ page.
 
 ---
 
