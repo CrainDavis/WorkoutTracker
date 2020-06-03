@@ -235,7 +235,7 @@ function calculateTotalWeight(data) {
   data.forEach((workout) => {
     let dailyTotal = getTotalWeight(workout.exercises);
 
-    console.log("daily total", Object.values(dailyTotal));
+    console.log("daily total", dailyTotal);
     total.push(Object.values(dailyTotal));
   });
 
@@ -247,13 +247,13 @@ function getTotalWeight(exercises) {
   const result = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
       acc.totalWeight = (acc.totalWeight || 0) + curr.weight;
-    };
+    }
 
     return acc;
   }, {});
 
   return result;
-};
+}
 
 // ==================================================================
 

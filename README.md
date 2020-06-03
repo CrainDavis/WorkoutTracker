@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This is an application that allows user to create new workout plans, edit existing workout plans, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data, Express to handle routes, and is deployed on Heroku.
+This is an application that allows user to create new a new workout plan for each day, add various exercises to that day's workout, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data, Express to handle routes, and is deployed on Heroku.
 
 ---
 
@@ -28,6 +28,31 @@ No installation is required.
 
 ## Usage:
 To use the application, to [this link]().
+
+How to use this application (if you are using it for the first time):
+* __step 1:__ On the Home Page, click the green "New Workout" button.
+![home page 1](readme-imgs/homepage-start.png)
+
+* __step 2:__ You will be taken to the Exercise Page, where you will first need to select what type of exercise to add to today's workout (options are "resistance" or "cardio").
+![exercise page 1](readme-imgs/exercisepage-main.png)
+
+* __step 3:__ Fill in additional exercise information. If you choose to do a "cardio" exercise, you will need to fill in the name, distance, and duration of the exercise. If you choose "resistance", you will be asked to enter the exercise's name, weight, sets, reps, and duration. 
+![exercise page 2](readme-imgs/exercisepage-options.png)
+
+* __step 4:__ Once all information for a particular exercise has been filled in, you can do one two things:
+  * 1) If this is the only/last exercise you wish to add to today's workout, click the blue "Complete" button. This will take you back to the Home Page, where you will see your stats.
+  * 2) If you wish to add more exercises to the workout plan, click the green "Add Exercise" button, which will add the exercise you previously input and then allow you to add another type of exercise.
+![exercise page 3](readme-imgs/exercisepage-finish.png)
+
+* __step 5:__ Once you are done adding exercises to a workout plan, you will see all of your accumulated stats on the Home Page. If you wish to add more exercises to that day's workout, on the Home Page click the blue "Continue Workout" button and follow steps 3 and 4 above. If you wish to see the stats in a more visual way, you can click the "Workout Stats" button in the upper-left corner of the browser.
+![home page 2](readme-imgs/homepage-withstats.png)
+
+* __step 6:__ In the Stats page, there are 4 graphs:
+  * 1) (top-left) a line graph depicting the total duration of a workout (the sum of the time it took to finish each exercise in a workout) for each day
+  * 2) (bottom-left) a pie graph depicting a breakdown of how long each exercise in a workout took to complete
+  * 3) (top-right) a bar graph showing the total number of pounds lifted during a workout for each day
+  * 4) (bottom-right) a pie graph showing a breakdown of the weight lifted during each exercise performed
+![stats page](readme-imgs/statspage-withstats.png)
 
 ---
 
@@ -186,6 +211,8 @@ There are some issues with the front-end code (came pre-developed and _not_ writ
 * On the main page, add a link to go to the _stats_ page (so that the user does not have to type in the _/stats_ route in the URL bar).
 * Fix the code for the _stats_ page for the following:
   * Fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started).
+  * Fix the 2 pie graphs so that exercises that are "completed" are not crossed-out in the legend and omitted from the chart.
+  * Fix the bottom-right pie graph so that it also omits "cardio"-type exercises from the chart
 * Make it so that a user can only start a new workout once a day, so as to facilitate functionality of the _stats_ page.
 
 ---

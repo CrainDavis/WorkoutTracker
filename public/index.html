@@ -8,12 +8,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <link rel="stylesheet" href="style.css" />
   <title>Fitness Tracker</title>
+  <style>
+    .dashboard-buttons {
+      background-color: lightblue;
+      padding: 10px;
+      border-radius: 5px;
+      color: #5793fd;
+    }
+    .dashboard-buttons:hover {
+      text-decoration: none;
+      background-color: navy;
+      color: lightblue;
+    }
+  </style>
 </head>
 
 <body>
   <nav>
-    <a href="/">Fitness Tracker</a>
-    <a href="/stats">Dashboard</a>
+    <a class="dashboard-buttons" href="/stats">Workout Stats</a>
   </nav>
   <div class="wrapper workout">
     <header>
