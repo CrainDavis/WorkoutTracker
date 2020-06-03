@@ -27,7 +27,7 @@ No installation is required.
 ---
 
 ## Usage:
-To use the application, to [this link]().
+To use the application, to [this link](https://whispering-tundra-66062.herokuapp.com/).
 
 How to use this application (if you are using it for the first time):
 * __step 1:__ On the Home Page, click the green "New Workout" button.
@@ -47,7 +47,7 @@ How to use this application (if you are using it for the first time):
 * __step 5:__ Once you are done adding exercises to a workout plan, you will see all of your accumulated stats on the Home Page. If you wish to add more exercises to that day's workout, on the Home Page click the blue "Continue Workout" button and follow steps 3 and 4 above. If you wish to see the stats in a more visual way, you can click the "Workout Stats" button in the upper-left corner of the browser.
 ![home page 2](readme-imgs/homepage-withstats.png)
 
-* __step 6:__ In the Stats page, there are 4 graphs:
+* __step 6:__ In the Stats page, there are 4 graphs (please see [Future Development](#future-development) for information on existing problems with this page):
   * 1) (top-left) a line graph depicting the total duration of a workout (the sum of the time it took to finish each exercise in a workout) for each day
   * 2) (bottom-left) a pie graph depicting a breakdown of how long each exercise in a workout took to complete
   * 3) (top-right) a bar graph showing the total number of pounds lifted during a workout for each day
@@ -57,7 +57,7 @@ How to use this application (if you are using it for the first time):
 ---
 
 ## Demonstration:
-To see how to use the application, go to [this link]().
+To see how to use the application, go to [this link](https://drive.google.com/file/d/1KImmxNjz60sr8XBxToeeBLVfUZ8tJNPN/view).
 
 ---
 
