@@ -33,8 +33,10 @@ function generatePalette() {
   return arr;
 }
 function populateChart(data) {
-  let durations = duration(data);
-  let pounds = calculateTotalWeight(data);
+  let totalDurations = totalDuration(data); // line graph (top-left)
+  let durations = duration(data); // pie graph (bottom-left)
+  let totalPounds = calculateTotalWeight(data); // bar graph (top-right)
+  let pounds = calculateWeights(data); // doughnut graph (bottom-right)
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -60,7 +62,7 @@ function populateChart(data) {
           label: "Workout Duration In Minutes",
           backgroundColor: "red",
           borderColor: "red",
-          data: durations,
+          data: totalDurations,
           fill: false,
         },
       ],
@@ -106,7 +108,7 @@ function populateChart(data) {
       datasets: [
         {
           label: "Pounds",
-          data: pounds,
+          data: totalPounds,
           backgroundColor: [
             "rgba(255, 99, 132, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -185,40 +187,40 @@ function populateChart(data) {
   });
 }
 
-// ==================================================================
-// ORIGINAL CODE; DOESN'T WORK
-// ==================================================================
+// ==============================================================
 
-// function duration(data) {
-//   let durations = [];
-
-//   data.forEach(workout => {
-//     workout.exercises.forEach(exercise => {
-//       durations.push(exercise.duration);
-//     });
-//   });
-
-//   return durations;
-// }
-
-// function calculateTotalWeight(data) {
-//   let total = [];
-
-//   data.forEach(workout => {
-//     workout.exercises.forEach(exercise => {
-//       total.push(exercise.weight);
-//     });
-//   });
-
-//   return total;
-// }
-
-// ==================================================================
-// NEW CODE; SEEMS TO WORK
-// ==================================================================
-
-// instead of getting individual exercise durations, get the total duration of a workout
+// for pie graph (bottom-left)
 function duration(data) {
+  let durations = [];
+
+  data.forEach(workout => {
+    workout.exercises.forEach(exercise => {
+      durations.push(exercise.duration);
+    });
+  });
+
+  return durations;
+}
+
+// ==============================================================
+
+// for doughnut graph (bottom-right)
+function calculateWeights(data) {
+  let total = [];
+
+  data.forEach(workout => {
+    workout.exercises.forEach(exercise => {
+      total.push(exercise.weight);
+    });
+  });
+
+  return total;
+}
+
+// ==============================================================
+
+// for line graph (top-left)
+function totalDuration(data) {
   let durations = [];
 
   data.forEach((workout) => {
@@ -228,7 +230,9 @@ function duration(data) {
   return durations;
 }
 
-// get each workout/day's total weight stat
+// ==============================================================
+
+// for bar graph (top-right)
 function calculateTotalWeight(data) {
   let total = [];
 
@@ -242,7 +246,7 @@ function calculateTotalWeight(data) {
   return total;
 }
 
-// get all of the weight accrued each day from "resistance"-type exercises
+// also for bar graph (top-right)
 function getTotalWeight(exercises) {
   const result = exercises.reduce((acc, curr) => {
     if (curr.type === "resistance") {
@@ -257,6 +261,7 @@ function getTotalWeight(exercises) {
 
 // ==================================================================
 
+// get all workout names (for the labels in the chart legends)
 function workoutNames(data) {
   let workouts = [];
 

@@ -205,14 +205,13 @@ The starter code for this assignment came with some issues, particularly in the 
 * __Problem 2:__
   * __issue:__ For any __Exercises__ categorized as "resistance", the stats page will separate their weights into different dates, even if they are in the same __Workout__.
   * __solution:__ Get the individual weights lifted for each __Exercise__ in a __Workout__ and total them up. Thus, the _stats_ page now shows each __Workout's__ total weight lifted in one bar-graph column.
+* __Problem 3:__
+  * __issue:__ The original two functions are not working for the four functions. Fixing the Line & Bar graphs causes issues for the Pie & Doughnut Charts.
+  * __solution:__ Make each have its own function to get and display data.
 
 ## Future Development:
 There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
-* On the main page, add a link to go to the _stats_ page (so that the user does not have to type in the _/stats_ route in the URL bar).
-* Fix the code for the _stats_ page for the following:
-  * Fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started).
-  * Fix the 2 pie graphs so that exercises that are "completed" are not crossed-out in the legend and omitted from the chart.
-  * Fix the bottom-right pie graph so that it also omits "cardio"-type exercises from the chart
+* Fix the way the _stats_ page messes up the entries for the days of the week (for example, Day-1 of a user's workout routine will always be input as "Sunday" according to the _stats_ page, regardless of which day of the week they actually started).
 * Make it so that a user can only start a new workout once a day, so as to facilitate functionality of the _stats_ page.
 
 ---
