@@ -76,9 +76,9 @@ app.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-// get all previous workouts (for stats page)
+// get the 7 most-recent workouts (for stats page)
 app.get("/api/workouts/range", (req, res) => {
-  db.Workout.find({})
+  db.Workout.find({}).sort({"_id":-1}).limit(7)
     .then((dbWorkout) => {
       res.json(dbWorkout);
     })

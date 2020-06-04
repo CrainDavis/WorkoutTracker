@@ -49,13 +49,13 @@ function populateChart(data) {
     type: "line",
     data: {
       labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
+        "today",
+        "yesterday",
+        "2 days ago",
+        "3 days ago",
+        "4 days ago",
+        "5 days ago",
+        "6 days ago",
       ],
       datasets: [
         {
@@ -97,13 +97,13 @@ function populateChart(data) {
     type: "bar",
     data: {
       labels: [
-        "Sunday",
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
+        "today",
+        "yesterday",
+        "2 days ago",
+        "3 days ago",
+        "4 days ago",
+        "5 days ago",
+        "6 days ago",
       ],
       datasets: [
         {
