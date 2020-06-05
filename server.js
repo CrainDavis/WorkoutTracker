@@ -80,7 +80,7 @@ app.put("/api/workouts/:id", (req, res) => {
 app.get("/api/workouts/range", (req, res) => {
   db.Workout.find({}).sort({"_id":-1}).limit(7)
     .then((dbWorkout) => {
-      res.json(dbWorkout.sort());
+      res.json(dbWorkout);
     })
     .catch((err) => {
       res.json(err);

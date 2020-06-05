@@ -38,6 +38,7 @@ function populateChart(data) {
   let totalPounds = calculateTotalWeight(data); // bar graph (top-right)
   let pounds = calculateWeights(data); // doughnut graph (bottom-right)
   let workouts = workoutNames(data);
+  let workoutDays = workoutDates(data);
   const colors = generatePalette();
 
   let line = document.querySelector("#canvas").getContext("2d");
@@ -48,15 +49,7 @@ function populateChart(data) {
   let lineChart = new Chart(line, {
     type: "line",
     data: {
-      labels: [
-        "6 days ago",
-        "5 days ago",
-        "4 days ago",
-        "3 days ago",
-        "2 days ago",
-        "yesterday",
-        "today",
-      ],
+      labels: workoutDays,
       datasets: [
         {
           label: "Workout Duration In Minutes",
@@ -96,15 +89,7 @@ function populateChart(data) {
   let barChart = new Chart(bar, {
     type: "bar",
     data: {
-      labels: [
-        "6 days ago",
-        "5 days ago",
-        "4 days ago",
-        "3 days ago",
-        "2 days ago",
-        "yesterday",
-        "today",
-      ],
+      labels: workoutDays,
       datasets: [
         {
           label: "Pounds",
@@ -239,7 +224,6 @@ function calculateTotalWeight(data) {
   data.forEach((workout) => {
     let dailyTotal = getTotalWeight(workout.exercises);
 
-    console.log("daily total", dailyTotal);
     total.push(Object.values(dailyTotal));
   });
 
@@ -261,7 +245,7 @@ function getTotalWeight(exercises) {
 
 // ==================================================================
 
-// get all workout names (for the labels in the chart legends)
+// get all workout names (for the labels of the Pie & Doughnut chart legends)
 function workoutNames(data) {
   let workouts = [];
 
@@ -272,4 +256,17 @@ function workoutNames(data) {
   });
 
   return workouts;
+}
+
+// ==================================================================
+
+// get all workout days (for the labels of the Line & Bar graphs)
+function workoutDates(data) {
+  let workoutDates = [];
+
+  data.forEach((workout) => {
+    workoutDates.push(workout.day.slice(5, 10));
+  });
+
+  return workoutDates;
 }

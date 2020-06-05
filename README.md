@@ -211,10 +211,12 @@ The starter code for this assignment came with some issues, particularly in the 
 * __Problem 4:__
   * __issue:__ The Line & Bar graphs display x-axis as the days of the week, what causes problems because the first workout in the JSON data will always appear on "Sunday" regardless of what day of the week it actually took place.
   * __solution:__ Labels for the x-axis on these graphs have been changed to "today", "yesterday", "2 days ago" and so on for 7 days.
+* __Problem 5:__
+  * __issue:__ The labels on the Line & Bar graphs display the days of the week (Sunday through Saturday), which will not necessarily correspond with the days that the workouts actually take place.
+  * __solution:__ Instead of hard-coding the days, write a function to get the days that the workouts occurred and set those to be the labels.
 
 ## Future Development:
 There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
-* Make it so that a user can only start a new workout once a day, so as to facilitate functionality of the _stats_ page, or change the Line & Bar graph labels so that they are just 7 individual workouts rather than the 7 days of the week.
 * In the Doughnut chart (which shows the breakdown of "resistance"-type exercises), find a way to not display the labels of "cardio"-type exercises; currently "cardio" exercises are not factored into the chart itself, but rather just displayed as crossed-out labels.
 * For the Pie & Doughnut Charts, if the same exercise is done multiple times, the graphs produce multiple labels and datasets. It would be best to only show one label per exercise-name and consolidate all the data for like-exercises into one dataset.
 
