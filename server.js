@@ -76,11 +76,11 @@ app.put("/api/workouts/:id", (req, res) => {
     });
 });
 
-// get the 7 most-recent workouts (for stats page)
+// get the 7 most-recent workouts, sorted in order from oldest to newest (for stats page)
 app.get("/api/workouts/range", (req, res) => {
   db.Workout.find({}).sort({"_id":-1}).limit(7)
     .then((dbWorkout) => {
-      res.json(dbWorkout);
+      res.json(dbWorkout.sort());
     })
     .catch((err) => {
       res.json(err);

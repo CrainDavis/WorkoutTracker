@@ -57,7 +57,7 @@ How to use this application (if you are using it for the first time):
 ---
 
 ## Demonstration:
-To see how to use the application, go to [this link](https://drive.google.com/file/d/1KImmxNjz60sr8XBxToeeBLVfUZ8tJNPN/view).
+To see how to use the application, go to [this link]().
 
 ---
 
