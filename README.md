@@ -4,7 +4,7 @@
 ---
 
 ## Description:
-This is an application that allows user to create new a new workout plan for each day, add various exercises to that day's workout, track their daily stats, and work towards their fitness goals! This application uses a MongoDatabase to store a user's workout data, Express to handle routes, and is deployed on Heroku. To see how to use this application, go to the [Demonstration](#demonstration) section.
+This is an application that allows users to create new workout plans daily, add various exercises to a day's workout, track their daily workout stats, and strive to reach their fitness goals! This application uses a MongoDatabase to store a user's workout data, Express to handle routes, and is deployed on Heroku. To see how to use this application, check out the [Usage](#usage) or [Demonstration](#demonstration) sections.
 
 ---
 
@@ -27,13 +27,14 @@ No installation is required.
 ---
 
 ## Usage:
-To use the application, to [this link](https://whispering-tundra-66062.herokuapp.com/).
+To use the application, go to [this link](https://whispering-tundra-66062.herokuapp.com/).
 
-How to use this application (if you are using it for the first time):
+How to use this application if you are using it for the first time:
+
 * __step 1:__ On the Home Page, click the green "New Workout" button.
 ![home page 1](readme-imgs/homepage-start.png)
 
-* __step 2:__ You will be taken to the Exercise Page, where you will first need to select what type of exercise to add to today's workout (options are "resistance" or "cardio").
+* __step 2:__ You will be taken to the Exercise Page, where you will first need to select what type of exercise to add to today's workout; the options are "resistance" or "cardio".
 ![exercise page 1](readme-imgs/exercisepage-main.png)
 
 * __step 3:__ Fill in additional exercise information. If you choose to do a "cardio" exercise, you will need to fill in the name, distance, and duration of the exercise. If you choose "resistance", you will be asked to enter the exercise's name, weight, sets, reps, and duration. 
@@ -41,23 +42,23 @@ How to use this application (if you are using it for the first time):
 
 * __step 4:__ Once all information for a particular exercise has been filled in, you can do one two things:
   * 1) If this is the only/last exercise you wish to add to today's workout, click the blue "Complete" button. This will take you back to the Home Page, where you will see your stats.
-  * 2) If you wish to add more exercises to the workout plan, click the green "Add Exercise" button, which will add the exercise you previously input and then allow you to add another type of exercise.
+  * 2) If you wish to add more exercises to the workout plan, click the green "Add Exercise" button, which will add the exercise you previously input and then allow you to add another type of exercise. You may add as many exercises to that day's workout plan as you would like.
 ![exercise page 3](readme-imgs/exercisepage-finish.png)
 
-* __step 5:__ Once you are done adding exercises to a workout plan, you will see all of your accumulated stats on the Home Page. If you wish to add more exercises to that day's workout, on the Home Page click the blue "Continue Workout" button and follow steps 3 and 4 above. If you wish to see the stats in a more visual way, you can click the "Workout Stats" button in the upper-left corner of the browser.
+* __step 5:__ Once you are done adding exercises to a workout plan, you will see all of your accumulated stats on the Home Page. If you wish to add more exercises to that day's workout, on the Home Page, click the blue "Continue Workout" button and follow steps 3 and 4 above. If at any point you wish to see the stats in a more visual way, you can click the "Workout Stats" button in the upper-left corner of the browser.
 ![home page 2](readme-imgs/homepage-withstats.png)
 
-* __step 6:__ In the Stats page, there are 4 graphs (please see [Future Development](#future-development) for information on existing problems with this page):
-  * 1) (top-left) a line graph depicting the total duration of a workout (the sum of the time it took to finish each exercise in a workout) for each day
+* __step 6:__ In the Stats page, there are four graphs displaying workout data for a seven-day range:
+  * 1) (top-left) a line graph depicting the total duration of a workout (the total amount of time it took to finish each exercise in a workout) for each day
   * 2) (bottom-left) a pie graph depicting a breakdown of how long each exercise in a workout took to complete
   * 3) (top-right) a bar graph showing the total number of pounds lifted during a workout for each day
-  * 4) (bottom-right) a pie graph showing a breakdown of the weight lifted during each exercise performed
+  * 4) (bottom-right) a doughnut graph showing a breakdown of the weight lifted during each exercise performed
 ![stats page](readme-imgs/statspage-withstats.png)
 
 ---
 
 ## Demonstration:
-To see how to use the application, go to [this link](https://drive.google.com/file/d/1FQdP3c2mG-v84ohokCjlMg1qLtPgtYdo/view).
+For another way to see how to use the application, go to [this link](https://drive.google.com/file/d/1FQdP3c2mG-v84ohokCjlMg1qLtPgtYdo/view) to watch a video demonstration.
 
 ---
 
@@ -200,14 +201,14 @@ https://www.contributor-covenant.org/translations.
 ## Bug Fixes:
 The starter code for this assignment came with some issues, particularly in the _public/stats.js_ file. The issues and their solutions are as follows:
 * __Problem 1:__
-  * __issue:__ Although a __Workout__ can have multiple __Exercises__ in it, the _stats_ page will separate the duration of each __Exercise__ into different days instead of adding up all the time accrued for all exercises in one workout.
-  * __solution:__ Fix the code so that the number of hours exercised in a day is found by using the "totalDuration" field is used instead of individual durations.
+  * __issue:__ Although a __Workout__ can have multiple __Exercises__ in it, the _stats_ page will separate the duration of each __Exercise__ into different days instead of adding up all the time accrued for all exercises in one __Workout__.
+  * __solution:__ Fix the code so that the number of hours exercised in a day is found by using the "totalDuration" field instead of individual __Exercise__ durations.
 * __Problem 2:__
   * __issue:__ For any __Exercises__ categorized as "resistance", the stats page will separate their weights into different dates, even if they are in the same __Workout__.
-  * __solution:__ Get the individual weights lifted for each __Exercise__ in a __Workout__ and total them up. Thus, the _stats_ page now shows each __Workout__'s total weight lifted in one bar-graph column.
+  * __solution:__ Get the individual amounts of weight lifted for each __Exercise__ in a __Workout__ and total them up. Thus, the _stats_ page now shows each __Workout__'s total weight lifted in one bar-graph column, not just for each __Exercise__.
 * __Problem 3:__
-  * __issue:__ The original two functions are not working for the four graphs. Fixing the Line & Bar graphs causes issues for the Pie & Doughnut Charts, while leaving them causes the aforementioned two problems to arise.
-  * __solution:__ Make each graph/chart have its own function to get and display data.
+  * __issue:__ The original two data-getting functions are not working for the four graphs. Fixing the Line & Bar graphs causes issues for the Pie & Doughnut Charts, while leaving them causes the aforementioned two problems to arise.
+  * __solution:__ Make each graph/chart have its own function(s) to get and display data.
 * __Problem 4:__
   * __issue:__ The labels on the Line & Bar graphs display the days of the week (Sunday through Saturday), which will not necessarily correspond with the days that the workouts actually took place.
   * __solution:__ Instead of hard-coding the days, it is better to write a function to get the days that the workouts occurred and set those to be the labels.
