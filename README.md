@@ -199,19 +199,7 @@ https://www.contributor-covenant.org/translations.
 ---
 
 ## Bug Fixes:
-The starter code for this assignment came with some issues, particularly in the _public/stats.js_ file. The issues and their solutions are as follows:
-* __Problem 1:__
-  * __issue:__ Although a __Workout__ can have multiple __Exercises__ in it, the _stats_ page will separate the duration of each __Exercise__ into different days instead of adding up all the time accrued for all exercises in one __Workout__.
-  * __solution:__ Fix the code so that the number of hours exercised in a day is found by using the "totalDuration" field instead of individual __Exercise__ durations.
-* __Problem 2:__
-  * __issue:__ For any __Exercises__ categorized as "resistance", the stats page will separate their weights into different dates, even if they are in the same __Workout__.
-  * __solution:__ Get the individual amounts of weight lifted for each __Exercise__ in a __Workout__ and total them up. Thus, the _stats_ page now shows each __Workout__'s total weight lifted in one bar-graph column, not just for each __Exercise__.
-* __Problem 3:__
-  * __issue:__ The original two data-getting functions are not working for the four graphs. Fixing the Line & Bar graphs causes issues for the Pie & Doughnut Charts, while leaving them causes the aforementioned two problems to arise.
-  * __solution:__ Make each graph/chart have its own function(s) to get and display data.
-* __Problem 4:__
-  * __issue:__ The labels on the Line & Bar graphs display the days of the week (Sunday through Saturday), which will not necessarily correspond with the days that the workouts actually took place.
-  * __solution:__ Instead of hard-coding the days, it is better to write a function to get the days that the workouts occurred and set those to be the labels.
+The starter code for this assignment came with some issues, particularly in the _public/stats.js_ file. The issues and their solutions are discussed in this Google Docs link: https://docs.google.com/document/d/13VoedgXcoP3hA_dKDaq6W9hb8QjzUNULPPj4MOKdQx8/edit?usp=sharing.
 
 ## Future Development:
 There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
