@@ -265,8 +265,21 @@ function workoutDates(data) {
   let workoutDates = [];
 
   data.forEach((workout) => {
-    workoutDates.push(workout.day.slice(5, 10));
+    let workoutDay = formatDate(workout.day);
+
+    workoutDates.push(workoutDay);
   });
 
   return workoutDates;
+}
+
+function formatDate(date) {
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric"
+  };
+
+  return new Date(date).toLocaleDateString(options);
 }
