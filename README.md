@@ -205,12 +205,3 @@ The starter code for this assignment came with some issues, particularly in the 
 There are some issues with the front-end code (came pre-developed and _not_ written by me) that need to be fixed. They are as follows:
 * In the Doughnut chart (which shows the breakdown of "resistance"-type exercises), find a way to not display the labels of "cardio"-type exercises; currently "cardio" exercises are not factored into the chart itself, but rather just displayed as crossed-out labels.
 * For the Pie & Doughnut Charts, if the same exercise is done multiple times, the graphs produce multiple labels and datasets. It would be best to only show one label per exercise-name and consolidate all the data for like-exercises into one dataset.
-
----
-
-## Questions: 
-For any questions, please contact:
-
-![CrainDavis](https://avatars0.githubusercontent.com/u/59345254?v=4) 
-
-__[CrainDavis](https://github.com/CrainDavis)__ at chyna.davis11@gmail.com
